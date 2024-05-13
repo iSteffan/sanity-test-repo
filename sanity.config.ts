@@ -1,8 +1,9 @@
 import { defineConfig } from 'sanity';
-// import { structureTool } from 'sanity/structure';
 // import { visionTool } from '@sanity/vision';
 // import { schemaTypes } from './schemaTypes';
-import { deskTool } from 'sanity/desk';
+import { structureTool } from 'sanity/structure';
+// import project from './sanity/schemas/project-schema';
+import schemas from './sanity/schemas';
 
 const config = defineConfig({
   name: 'default',
@@ -12,15 +13,15 @@ const config = defineConfig({
   dataset: 'production',
 
   // plugins: [structureTool(), visionTool()],
-  plugins: [deskTool()],
+  plugins: [structureTool()],
 
   apiVersion: '2024-05-09',
 
   basePath: '/admin',
 
-  // schema: {
-  //   types: schemaTypes,
-  // },
+  schema: {
+    types: schemas,
+  },
 });
 
 export default config;
