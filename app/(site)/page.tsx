@@ -7,10 +7,11 @@ export default async function Home() {
   // console.log('projects', projects);
 
   return (
-    <div className="max-w-5xl mx-auto">
-      <h1 className="text-7xl font-extrabold py-20">
+    <div>
+      <h1 className="text-7xl font-extrabold">
         Hello I&apos;m
         <span className="bg-gradient-to-r from-orange-400 to bg-purple-600 bg-clip-text text-transparent">
+          {' '}
           Stepan
         </span>
         !
